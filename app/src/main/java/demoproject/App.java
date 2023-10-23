@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import com.syncfusion.docio.*;
 import com.syncfusion.javahelper.system.StringSupport;
 import com.syncfusion.javahelper.system.text.regularExpressions.MatchSupport;
+import com.syncfusion.javahelper.system.globalization.CultureInfoSupport;
 
 public class App {
     public String getGreeting() {
@@ -21,6 +22,7 @@ public class App {
 
     public static void main(String[] args) throws FileNotFoundException, Exception {
         System.out.println(new App().getGreeting());
+		System.out.println(CultureInfoSupport.getCurrentCulture());
 		//Open an existing document from the stream using the constructor of the WordDocument class.
 		FileInputStream fileStreamPath = new FileInputStream("unable-to-upload.docx");
 		WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
